@@ -18,3 +18,22 @@ spring:
 jasypt:
   encryptor:
     bean: ymlEncryptor
+
+---
+spring:
+  profiles:
+    active: test
+  datasource:
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+    platform: h2
+    url: jdbc:h2:mem:testdb;DB_CLOSE_ON_EXIT=FALSE
+  jpa:
+    database-platform: H2
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true

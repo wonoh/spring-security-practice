@@ -6,7 +6,6 @@ spring:
     url: jdbc:mysql://localhost:3306/security_practice?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
     username: root
     password: ENC(utofG6dMNVzVwmuq2bSFGLxRqUgwi2mM0q/TIvmfUYiRkQ1h0DGVqA==)
-
   jpa:
     hibernate:
       ddl-auto: validate
@@ -21,8 +20,7 @@ jasypt:
 
 ---
 spring:
-  profiles:
-    active: test
+  profiles: test
   datasource:
     driver-class-name: org.h2.Driver
     username: sa
